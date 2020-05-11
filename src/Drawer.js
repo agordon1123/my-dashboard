@@ -1,23 +1,20 @@
-import React from 'react';
-import { Drawer, List, ListItem, ListItemIcon } from '@material-ui/core';
-import { GitHubIcon } from '@material-ui/icons';
+import React, { Children } from 'react';
+import { 
+    Drawer as MiniDrawer, 
+    List, 
+    ListItem, 
+    ListItemIcon, 
+    ListItemText 
+} from '@material-ui/core';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
-const Drawer = () => {
+const Drawer = props => {
+    const { data } = props;
+
     return (
-        <Drawer
-            variation='permanent'
-            style={{ width: '240px' }}
-        >
-            <List>
-                {['test1', 'test2', 'test3'].map(el => {
-                    <ListItem>
-                        <ListItemIcon>
-                            <GitHubIcon />
-                        </ListItemIcon>
-                    </ListItem>
-                })}
-            </List>
-        </Drawer>
+        <div className="drawer-container">
+            <img className="user-image" src={data.avatar_url} />
+        </div>
     );
 };
 

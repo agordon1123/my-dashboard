@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  display: flex;
+}
+
+.drawer-container {
+  width: 15vw;
+  border-right: 2px solid;
+  height: 100vh;
+}
+
+.user-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
