@@ -16,7 +16,7 @@ code {
   display: flex;
 }
 
-.drawer-container {
+.nav-container {
   width: 15vw;
   border-right: 2px solid;
   height: 100vh;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Drawer from './Drawer';
+import Drawer from './Nav';
 import axios from 'axios';
 import GitHubGraph from './GitHubGraph';
 
@@ -18,7 +18,6 @@ const App = () => {
   return (
     <div className="App">
       <Drawer data={data} />
-      <h1>Hello world</h1>
       <GitHubGraph username="agordon1123" />
     </div>
   );
