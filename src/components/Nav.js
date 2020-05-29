@@ -6,8 +6,9 @@ const Nav = props => {
     return (
         <div className="nav-container">
             <img className="user-image" src={data.avatar_url} />
-            <p>Daily</p>
-            <p>Tasks</p>
+            {['DAILY', 'TASKS', 'MEMES', 'WEATHER'].map((el, i) => (
+                <p className={`nav-item ${el.toLowerCase()}`} key={i}>{el}</p>
+            ))}
         </div>
     );
 };

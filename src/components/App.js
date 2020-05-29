@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
-import Drawer from './Nav';
 import axios from 'axios';
+// components
 import GitHubGraph from './GitHubGraph';
+import Drawer from './Nav';
 
 const App = () => {
 
