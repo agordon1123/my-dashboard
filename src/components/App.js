@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 // components
 import GitHubGraph from './GitHubGraph';
-import Drawer from './Nav';
+import Nav from './Nav';
+import Tasks from './Tasks';
+import Weather from './Weather';
+import Placeholder from './Placeholder';
 
 const App = () => {
 
@@ -16,9 +19,14 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <Drawer data={data} />
-      <GitHubGraph username="agordon1123" />
+    <div className='App'>
+      <Nav data={data} />
+      <div className='content-container'>
+        <Weather />
+        {[0, 1, 2, 3, 4, 5].map(el => <Placeholder key={el} />)}
+        <GitHubGraph username='agordon1123' />
+        <Tasks />
+      </div>
     </div>
   );
 }

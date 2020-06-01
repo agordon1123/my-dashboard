@@ -1,0 +1,15 @@
+.nav-container {
+    width: 15vw;
+    border-right: 2px solid;
+    height: 100vh;
+    .user-image {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+    }
+    .nav-item {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
