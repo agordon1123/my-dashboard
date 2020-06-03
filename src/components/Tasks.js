@@ -16,9 +16,11 @@ const testData = [
     }
 ];
 
-const Tasks = () => {
+const Tasks = props => {
+    const { isDarkMode } = props;
+    
     return (
-        <div className='tasks-container'>
+        <div className={isDarkMode ? 'Tasks--dark' : 'Tasks--light'}>
             <h3>Tasks</h3>
             {testData.map((el, i) => (
                 <Task data={el} key={i} />

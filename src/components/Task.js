@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const Task = props => {
-    console.log(props);
     const { title, completed, notes, created } = props.data;
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 

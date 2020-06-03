@@ -1,15 +1,127 @@
-.nav-container {
+.Nav--dark {
     width: 15vw;
-    border-right: 2px solid;
+    // border-right: 2px solid;
     height: 100vh;
+    background-color: $darkmode-background;
     .user-image {
         height: 100px;
         width: 100px;
         border-radius: 50px;
+        margin-top: 4rem;
+        border: 3px solid white;
     }
-    .nav-item {
-        &:hover {
-            cursor: pointer;
+    .nav-items {
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .nav-item {
+            color: $darkmode-header;
+            &:hover {
+                cursor: pointer;
+                color: $contribution-green;
+            }
+        }
+    }
+    .darkmode-buttons {
+        svg {
+            width: 2rem;
+            height: 2rem;
+            margin: .5rem;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }
+
+.Nav--light {
+    width: 15vw;
+    // border-right: 2px solid;
+    height: 100vh;
+    background-color: $lightmode-background;
+    .user-image {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        margin-top: 4rem;
+        border: 3px solid $darkmode-content;
+    }
+    .nav-items {
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .nav-item {
+            color: $lightmode-header;
+            &:hover {
+                cursor: pointer;
+                color: $contribution-green;
+            }
+        }
+    }
+    .darkmode-buttons {
+        svg {
+            width: 2rem;
+            height: 2rem;
+            margin: .5rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// SLIDER
+// .switch {
+//     position: relative;
+//     display: inline-block;
+//     width: 4.6rem;
+//     height: 2.4rem;
+//     input {
+//         opacity: 0;
+//         width: 0;
+//         height: 0;
+//         &:checked + .slider {
+//             background-color: $contribution-green;
+//         }
+//         &:focus + .slider {
+//             box-shadow: 0 0 1px $contribution-green;
+//         }
+//         &:checked + .slider::before {
+//             -webkit-transform: translateX(18px);
+//             -ms-transform: translateX(18px);
+//             transform: translateX(18px);
+//         }
+//     }
+//     .slider {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         background-color: #ccc;
+//         -webkit-transition: .4s;
+//         transition: .4s;
+//         &:hover {
+//             cursor: pointer;
+//         }
+//         &::before {
+//             position: absolute;
+//             content: "";
+//             height: 18px;
+//             width: 20px;
+//             left: 4px;
+//             bottom: 3px;
+//             background-color: white;
+//             -webkit-transition: .4s;
+//             transition: .4s;
+//         }
+//     }
+//     .round {
+//         border-radius: 24px;
+//         &::before {
+//             border-radius: 50%;
+//         }
+//     }
+// }

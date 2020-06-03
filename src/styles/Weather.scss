@@ -1,6 +1,23 @@
-.weather-container {
+.Weather--dark {
     grid-area: weather-container;
     grid-column-start: 1;
     grid-column-end: 4;
-    border: 1px solid;
+    margin: .5rem;
+    border-radius: .5rem;
+    background-color: $darkmode-content;
+    h3 {
+        color: $darkmode-header;
+    }
+}
+
+.Weather--light {
+    grid-area: weather-container;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: .5rem;
+    border-radius: .5rem;
+    background-color: $lightmode-content;
+    h3 {
+        color: $lightmode-header;
+    }
 }

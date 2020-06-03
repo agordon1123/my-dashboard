@@ -1,13 +1,35 @@
-.App {
+.App--dark {
   text-align: center;
   display: flex;
   font-size: 1.6rem;
+  background-color: $darkmode-background;
+  color: $darkmode-text;
   .content-container {
     width: 85vw;
     display: grid;
+    padding: .5rem;
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 25% 25% 25% 25%;
-    // grid-gap: 1%;
+    grid-template-areas:
+      "weather-container weather-container weather-container tasks-container"
+      ". . . tasks-container"
+      ". . . tasks-container"
+      "graph-container graph-container graph-container tasks-container"
+  }
+}
+
+.App--light {
+  text-align: center;
+  display: flex;
+  font-size: 1.6rem;
+  background-color: $lightmode-background;
+  color: $lightmode-text;
+  .content-container {
+    width: 85vw;
+    display: grid;
+    padding: .5rem;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 25% 25% 25% 25%;
     grid-template-areas:
       "weather-container weather-container weather-container tasks-container"
       ". . . tasks-container"

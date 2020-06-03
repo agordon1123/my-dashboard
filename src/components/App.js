@@ -9,7 +9,9 @@ import Placeholder from './Placeholder';
 
 const App = () => {
 
+  const darkMode = localStorage.getItem('isDarkMode') == 'true';
   const [data, setData] = useState({});
+  const [isDarkMode, setIsDarkMode] = useState(darkMode);
 
   useEffect(() => {
     axios
@@ -19,13 +21,13 @@ const App = () => {
   }, []);
 
   return (
-    <div className='App'>
-      <Nav data={data} />
+    <div className={isDarkMode ? 'App--dark' : 'App--light'}>
+      <Nav data={data} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <div className='content-container'>
-        <Weather />
-        {[0, 1, 2, 3, 4, 5].map(el => <Placeholder key={el} />)}
+        <Weather isDarkMode={isDarkMode} />
+        {[0, 1, 2, 3, 4, 5].map(el => <Placeholder key={el} isDarkMode={isDarkMode} />)}
         <GitHubGraph username='agordon1123' />
-        <Tasks />
+        <Tasks isDarkMode={isDarkMode} />
       </div>
     </div>
   );

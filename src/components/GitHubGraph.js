@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import GitHubCalendar from 'react-github-calendar';
 
-const GitHubGraph = () => {
+const GitHubGraph = props => {
+    const { isDarkMode } = props;
 
     useEffect(() => {
         // removes title and contributions to only display calendar
@@ -14,7 +15,7 @@ const GitHubGraph = () => {
     }, []);
     
     return (
-        <div className='graph-container'>
+        <div className={isDarkMode ? 'GitHubGraph--dark' : 'GitHubGraph--light'}>
             <GitHubCalendar username='agordon1123' />
         </div>
     );

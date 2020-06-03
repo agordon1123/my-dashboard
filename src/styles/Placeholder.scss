@@ -1,4 +1,19 @@
-.placeholder-container {
+.Placeholder--dark {
     // grid-area: placeholder;
-    border: 1px solid;
+    margin: .5rem;
+    border-radius: .5rem;
+    background-color: $darkmode-content;
+    h3 {
+        color: $darkmode-header;
+    }
+}
+
+.Placeholder--light {
+    // grid-area: placeholder;
+    margin: .5rem;
+    border-radius: .5rem;
+    background-color: $lightmode-content;
+    h3 {
+        color: $lightmode-header;
+    }
 }

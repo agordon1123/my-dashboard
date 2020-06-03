@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-const Weather = () => {
+const Weather = props => {
+    const { isDarkMode } = props;
     const [data, setData] = useState({});
 
     useEffect(() => {
@@ -8,7 +9,7 @@ const Weather = () => {
     }, []);
 
     return (
-        <div className='weather-container'>
+        <div className={isDarkMode ? 'Weather--dark' : 'Weather--light'}>
             <h3>WEATHER.JS</h3>
         </div>
     );
