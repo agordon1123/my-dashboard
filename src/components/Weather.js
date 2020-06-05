@@ -16,6 +16,7 @@ const Weather = props => {
     const lon = -80.003400;
 
     useEffect(() => {
+        console.log("got fucked");
         axios
             .get(`${apiUrl}/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&appid=${apiKey}&units=imperial`)
             .then(res => {
@@ -26,7 +27,7 @@ const Weather = props => {
                 });
             })
             .catch(err => console.log(err));
-    }, [apiKey, apiUrl, data, lon]);
+    }, []);
 
     return (
         <div className={isDarkMode ? 'Weather--dark' : 'Weather--light'}>
