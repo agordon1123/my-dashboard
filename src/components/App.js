@@ -9,7 +9,7 @@ import Placeholder from './Placeholder';
 
 const App = () => {
 
-  const darkMode = localStorage.getItem('isDarkMode') == 'true';
+  const darkMode = localStorage.getItem('isDarkMode') === 'true';
   const [data, setData] = useState({});
   const [isDarkMode, setIsDarkMode] = useState(darkMode);
 
